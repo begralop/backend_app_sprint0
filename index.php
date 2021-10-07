@@ -14,6 +14,8 @@
           <tr>
               <th>Id</th>
               <th>Mediciones</th>
+              <th>Latitud</th>
+              <th>Longitud</th>
               
           </tr>
           <?php
@@ -26,6 +28,8 @@
           <tr>
               <td><?php echo $mostrar['ID']?></td>
               <td><?php echo $mostrar['Medicion']?></td>
+              <td><?php echo $mostrar['Latitud']?></td>
+              <td><?php echo $mostrar['Longitud']?></td>
           </tr>
           
           <?php
