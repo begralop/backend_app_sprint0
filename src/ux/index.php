@@ -7,10 +7,10 @@
 
   </head>
   <body>
-  <?php include('conexion.php'); ?>
+  <?php include('../conexiones/conexion.php'); ?>
   <br>
       <table>
-          <tr><h1>Listado de datos</h1></tr>
+          <tr><h1>Datos registrados</h1></tr>
           <tr>
               <th>Id</th>
               <th>Mediciones</th>
