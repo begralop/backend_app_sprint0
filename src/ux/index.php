@@ -7,9 +7,10 @@
 
   </head>
   <body>
-  <?php include('../conexiones/conexion.php'); ?>
+    <?php include('../conexiones/conexion.php'); ?>
+      <?php include('../logica/obtenerTodasMediciones.php'); ?>
   <br>
-      <table>
+      <table width="500" border="2">
           <tr><h1>Datos registrados</h1></tr>
           <tr>
               <th>Id</th>
@@ -26,16 +27,19 @@
           ?>
           
           <tr>
-              <td><?php echo $mostrar['ID']?></td>
-              <td><?php echo $mostrar['Medicion']?></td>
-              <td><?php echo $mostrar['Latitud']?></td>
-              <td><?php echo $mostrar['Longitud']?></td>
+              <td align = center><?php echo $mostrar['ID']?></td>
+              <td align = center><?php echo $mostrar['Medicion']?></td>
+              <td align = center><?php echo $mostrar['Latitud']?></td>
+              <td align = center><?php echo $mostrar['Longitud']?></td>
           </tr>
           
           <?php
           }
               ?>
       </table>
+      <p>
+      <input type="text" name="valor_cuantas" size = 50 placeholder= "Introduzca número de mediciones" />
+      <input type="button" value="Obtener mediciones">
   </body>
 </html>
 
