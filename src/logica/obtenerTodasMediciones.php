@@ -1,13 +1,22 @@
-<?php
-    require_once '../conexiones/conexion.php';
+ <!--
+            
+ obtenerTodasMediciones
+ Belén Grande López
+ 2021-10-10
+ Método obtenerTodasMediciones para mostrarlas en la app y en la web
 
-    $query="SELECT * from datos";
+-->
+
+<?php
+    require_once '../conexiones/conexion.php'; // Establecemos conexión con la base de datos
+
+    $query="SELECT * from datos"; // Hacemos un select de toda la tabla
     
     $resultado=$mysql->query($query);
 
-    $infoRes = array();
+    $infoRes = array(); // Declaramos un array
 
-    foreach($resultado as $row){
+    foreach($resultado as $row){ // Vamos rellenándolo con los valores que vamos obteniendo 
         $infoRes[] = $row;
     }
     

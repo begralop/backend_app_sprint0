@@ -1,3 +1,12 @@
+ <!--
+            
+ Index
+ Belén Grande López
+ 2021-10-10
+ Index con los datos a mostrar en una tabla
+
+-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,8 +16,9 @@
 
   </head>
   <body>
+      
     <?php include('../conexiones/conexion.php'); ?>
-    //  <?php include('../logica/obtenerTodasMediciones.php'); ?>
+   
   <br>
       <table width="500" border="2">
           <tr><h1>Datos registrados</h1></tr>
@@ -26,8 +36,10 @@
           while($mostrar=mysqli_fetch_array($resultado)){
           ?>
           
+          <!--
+            Obtenemos los valores que deseamos mostrar en la tabla -->
           <tr>
-              <td align = center><?php echo $mostrar['ID']?></td>
+              <td align = center><?php echo $mostrar['ID']?></td> 
               <td align = center><?php echo $mostrar['Medicion']?></td>
               <td align = center><?php echo $mostrar['Latitud']?></td>
               <td align = center><?php echo $mostrar['Longitud']?></td>
@@ -39,9 +51,11 @@
       </table>
       <p>
           
+          <!--
+            Obtenemos cuantas últimas mediciones queremos obtener llamando al php con el método -->
+          
     <form action="obtenerUltimasMediciones.php" method="POST">
-        <p>Cuantas</p>
-        <label for="valor_cuantas">Ultimas mediciones que quiere coger</label>
+        <label for="valor_cuantas">¿Cuántas últimas mediciones desea coger?</label>
         <br>
         <input type="text" name="valor_cuantas" id="valor_cuantas" size = 50 placeholder= "Introduzca número de mediciones"  required>
         <input type="submit" value="Guardar">
