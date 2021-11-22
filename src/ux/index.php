@@ -21,14 +21,16 @@
    
   <br>
       <table width="500" border="2">
-          <tr><h1>Datos registrados</h1></tr>
-          <tr>
-              <th>Id</th>
-              <th>Mediciones</th>
+          
+          <thead bgcolor="pink " >
+              <tr>
+               <th>Id</th>
+              <th >Mediciones</th>
               <th>Latitud</th>
               <th>Longitud</th>
-              
-          </tr>
+              </tr>
+          </thead>
+
           <?php
           $sql="select * from datos";
           $resultado=mysqli_query($mysql, $sql);
@@ -55,9 +57,8 @@
             Obtenemos cuantas últimas mediciones queremos obtener llamando al php con el método -->
           
     <form action="obtenerUltimasMediciones.php" method="POST">
-        <label for="valor_cuantas">¿Cuántas últimas mediciones desea coger?</label>
         <br>
-        <input type="text" name="valor_cuantas" id="valor_cuantas" size = 50 placeholder= "Introduzca número de mediciones"  required>
+        <input type="text" name="valor_cuantas" id="valor_cuantas" size = 50 placeholder= "Introduzca el número de mediciones que desea mostrar"  required>
         <input type="submit" value="Guardar">
     </form>
   </body>
